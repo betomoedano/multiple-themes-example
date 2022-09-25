@@ -1,0 +1,59 @@
+:root {
+  --success: green;
+  --warning: orange;
+  --error: red;
+  --info: blue;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    --background: #000;
+    --color: #fff;
+    --primary-text-color: #fff;
+    --secondary-text-color: #9a9a9a;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  html {
+    --background: #fff;
+    --primary-text-color: #000;
+    --secondary-text-color: #424242;
+  }
+}
+
+html[data-theme="dark"] {
+  --background: #000;
+  --color: #fff;
+  --primary-text-color: #fff;
+  --secondary-text-color: #9a9a9a;
+}
+html[data-theme="light"] {
+  --background: #fff;
+  --color: #000;
+  --primary-text-color: #000;
+  --secondary-text-color: #424242;
+}
+html[data-theme="tomato"] {
+  --background: tomato;
+  --color: #fff;
+  --primary-text-color: #fff;
+  --secondary-text-color: #424242;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--color);
+}
+
+button {
+  background-color: var(--warning);
+}
+
+h1 {
+  color: var(--primary-text-color);
+}
+
+h2 {
+  color: var(--secondary-text-color);
+}
